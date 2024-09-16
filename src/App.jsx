@@ -1,5 +1,5 @@
 import React from 'react';
-import Moments from './memories/memory.jsx';
+import Moments from './component/memories/memory.jsx';
 
 function App() {
   return (
