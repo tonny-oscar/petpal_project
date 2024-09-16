@@ -12,3 +12,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const imageDb = getStorage(app);
+
+export {imageDb};

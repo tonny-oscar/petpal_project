@@ -12,7 +12,7 @@ function FirebaseImageUpload() {
             const imgRef = ref(imageDb, `files/${v4()}`);
             uploadBytes(imgRef, img).then(value => {
                 console.log("Upload successful:", value);
-                // Optionally, fetch the URL of the uploaded image
+                
                 getDownloadURL(imgRef).then(url => {
                     setImgUrl(prevUrls => [...prevUrls, url]);
                 }).catch(error => {
@@ -32,7 +32,7 @@ function FirebaseImageUpload() {
             const fetchUrls = imgs.items.map(item =>
                 getDownloadURL(item).then(url => url).catch(error => {
                     console.error("Error getting image URL:", error);
-                    return null; // Return null if there's an error
+                    return null; 
                 })
             );
             Promise.all(fetchUrls).then(urls => {

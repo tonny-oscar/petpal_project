@@ -1,5 +1,7 @@
 import React from 'react';
-import Moments from './component/memories/memory.jsx';
+//import FirebaseImageUpload from './components/FirebaseImageUpload';
+import Moments from './component/memories/memory';
+//import './styles/App.css';
 
 function App() {
   return (
