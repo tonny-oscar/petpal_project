@@ -89,14 +89,14 @@ const Memories = () => {
   );
 };
 
-// File input component
+// File input 
 const FileInput = ({ onChange }) => (
   <input type="file" multiple onChange={onChange} className="block w-full text-sm text-gray-700 mb-4" />
 );
 
-// Upload button component
+// Upload button
 const UploadButton = ({ onClick, disabled, uploading }) => (
-  <button onClick={onClick} disabled={disabled} className={`w-full py-2 px-4 text-white font-semibold rounded-lg transition duration-300 ${uploading ? 'bg-gray-500' : 'bg-blue-500 hover:bg-blue-600'}`}>
+  <button onClick={onClick} disabled={disabled} className={`w-full py-2 px-4 text-white font-semibold rounded-lg transition duration-300 ${uploading ? 'bg-gray-500' : 'bg-red-500 hover:bg-blue-600'}`}>
     {uploading ? 'Uploading...' : 'Upload'}
   </button>
 );
