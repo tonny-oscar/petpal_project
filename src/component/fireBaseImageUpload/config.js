@@ -2,15 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArZ9fsoqBjTInTO9v5hxHVAjATqpqSlDw",
-  authDomain: "imageupload-51caa.firebaseapp.com",
-  projectId: "imageupload-51caa",
-  storageBucket: "imageupload-51caa.appspot.com",
-  messagingSenderId: "618501532142",
-  appId: "1:618501532142:web:6a7dde329e5de8fc00c6ff"
+  apiKey: "AIzaSyBsGaIHQL2mma2Ea54hzymDMaUwd7lsZiY",
+  authDomain: "pet-pal-34749.firebaseapp.com",
+  projectId: "pet-pal-34749",
+  storageBucket: "pet-pal-34749.appspot.com",
+  messagingSenderId: "194631603766",
+  appId: "1:194631603766:web:ab38afbcfcf484a21e6a97"
 };
 
 const app = initializeApp(firebaseConfig);
-export const imageDb = getStorage(app);
+export const storage = getStorage(app);
 
-export {imageDb};

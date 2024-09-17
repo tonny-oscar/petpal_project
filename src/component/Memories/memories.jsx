@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Moments = () => {
+const memories = () => {
   const [images, setImages] = useState([]);
   const [comments, setComments] = useState({});
 
@@ -69,4 +69,4 @@ const Moments = () => {
   );
 };
 
-export default Moments;
+export default memories;
