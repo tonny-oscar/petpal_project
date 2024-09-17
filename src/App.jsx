@@ -1,11 +1,11 @@
 import React from 'react';
 //import FirebaseImageUpload from './components/FirebaseImageUpload';
-import Moments from './component/memories/memory';
-//import './styles/App.css';
+import Moments from './component/memories/memories';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-center">
       <Moments />
     </div>
   );
