@@ -11,7 +11,7 @@ const FirebaseImageUpload = ({ file }) => {
     const uploadFile = () => {
       const storageRef = ref(storage, `images/${file.name}`); 
 
-      const uploadTask = uploadBytesResumable(storageRef, file); // Start upload
+      const uploadTask = uploadBytesResumable(storageRef, file); 
 
       uploadTask.on(
         'state_changed',
@@ -21,7 +21,7 @@ const FirebaseImageUpload = ({ file }) => {
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setImageUrl(downloadURL); // Stores image URL
+            setImageUrl(downloadURL); 
           });
         }
       );
@@ -38,7 +38,7 @@ const FirebaseImageUpload = ({ file }) => {
   );
 };
 
-// render uploaded image
+//uploaded image
 const UploadedImage = ({ imageUrl }) => (
   imageUrl && (
     <div>

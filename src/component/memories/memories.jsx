@@ -58,14 +58,14 @@ const Memories = () => {
       });
   };
 
-  // Handle image deletion
+  // deletes image from the list
   const handleDelete = (index) => {
     const updatedItems = [...items];
     updatedItems.splice(index, 1); 
     setItems(updatedItems);
   };
 
-  //list of items with delete buttons
+  //items with delete buttons
   const renderItems = () => {
     return items.map((item, index) => (
       <div key={index} className="relative flex flex-col items-center p-4 border border-gray-300 rounded-lg shadow-md mb-4">
@@ -80,9 +80,7 @@ const Memories = () => {
           placeholder="Add a description"
           className="w-full mt-2 p-2 border border-gray-300 rounded-lg"
         />
-      
-              
-        {/* Delete Button */}
+
         <div>
             <button 
               onClick={() => handleDelete(index)} 
@@ -107,12 +105,12 @@ const Memories = () => {
   );
 };
 
-// File input component
+// input file
 const FileInput = ({ onChange }) => (
   <input type="file" multiple onChange={onChange} className="block w-full text-sm text-gray-700 mb-4" />
 );
 
-// Upload button component
+// Upload button
 const UploadButton = ({ onClick, disabled, uploading }) => (
   <button onClick={onClick} disabled={disabled} className={`w-full py-2 px-4 text-white font-semibold rounded-lg transition duration-300 ${uploading ? 'bg-gray-500' : 'bg-red-500 hover:bg-blue-600'}`}>
     {uploading ? 'Uploading...' : 'Upload'}
